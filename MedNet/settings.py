@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'jazzmin',
     'auth1',
     'django.contrib.admin',

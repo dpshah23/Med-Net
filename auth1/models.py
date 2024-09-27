@@ -30,3 +30,4 @@ class Visit(models.Model):
 
     def __str__(self):
         return f"{self.page_visited} - {self.visit_count}"
+    
