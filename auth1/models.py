@@ -9,7 +9,7 @@ class User(models.Model):
     email=models.EmailField()
     password=models.CharField(max_length=100)
     name=models.CharField(max_length=100)
-    role=models.CharField(choices=["patient","doctor"],max_length=100)
+    role=models.CharField(max_length=100)
     created_at=models.DateTimeField(default=timezone.now)
 
 
