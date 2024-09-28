@@ -6,11 +6,16 @@ from django.views.decorators.csrf import csrf_exempt
 import google.generativeai as genai
 import json
 import os
-
+from .models import *
 
 # Create your views here.
 def home(request):
-    return render(request,"home.html")
+
+    length_doctors=doctor.objects.filter().count()
+    length_patients=patient.objects.filter().count()
+    length_appointments=appointment.objects.filter().count()
+
+    return render(request,"home.html",{ 'length_doctors':length_doctors,'length_patients':length_patients,'length_appointments':length_appointments})
 
 def about(request):
     return render(request,"about.html")
