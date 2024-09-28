@@ -132,8 +132,22 @@
                 <p>Track how people near you are getting their flu shots</p>
             </div>
         </div>
+
+       
     </section>
 
+    <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">Chatbot</div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Ask me anything..." />
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+      </div>
     <!-- Footer -->
 
     <footer>

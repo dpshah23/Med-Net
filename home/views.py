@@ -47,7 +47,9 @@ def api_response(request):
             genai.configure(api_key=api_key)
 
             model = genai.GenerativeModel('gemini-pro')
-            resp="You are a healthcare assistant. A patient describes their symptoms, and you need to provide a possible condition in 1 or 2 sentences. Only mention the possible condition without additional explanations.Dont give other answers rather than the possible condition and dont give answer to unusual questions just give answer that i am unable to answer and add reason to it."
+            resp="You are a healthcare assistant. A patient describes their symptoms, and you need to provide a possible condition in 1 or 2 sentences. Only mention the possible condition without additional explanations.Dont give other answers rather than the possible condition and dont give answer to unusual questions just give answer that i am unable to answer and add reason to it.And Answer Of greeting and only include text dont include readme response"
+
+
             question=resp+question
             response = model.generate_content(question)
             print(response)
