@@ -27,13 +27,13 @@
         </ul>
         {% if 'email' not in request.session %}
         <div class="nav-actions">
-            <a href="#" class="login">Log in</a>
-            <a href="#" class="btn-find-match">Sign Up</a>
+            <a href="/auth/login/" class="login">Log in</a>
+            <a href="/auth/signup/" class="btn-find-match">Sign Up</a>
         </div>
         {% else %}
         <div class="nav-actions">
-            <a href="#" class="login">Log in</a>
-            <a href="#" class="btn-find-match">Sign Up</a>
+            <a href="/auth/logout/" class="login">Log Out</a>
+            
         </div>
         
         {% endif %}

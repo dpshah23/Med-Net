@@ -31,3 +31,13 @@ def login(request):
             return render(request,"login.html",{"error":"User Does not Exist"})
         
     return render(request,'Login.html')
+
+def logout(request):
+    if 'email' not in request.session:
+        return redirect('/auth/login/')
+    del request.session['email']
+    del request.session['name']
+    del request.session['id']
+    messages.success(request,"Logout Successful")
+    return redirect('/auth/login/')
+
