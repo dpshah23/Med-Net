@@ -25,10 +25,18 @@
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
+        {% if 'email' not in request.session %}
         <div class="nav-actions">
-            <a href="#" class="login">Log in</a>
-            <a href="#" class="btn-find-match">Sign Up</a>
+            <a href="/auth/login/" class="login">Log in</a>
+            <a href="/auth/signup/" class="btn-find-match">Sign Up</a>
         </div>
+        {% else %}
+        <div class="nav-actions">
+            <a href="/auth/logout/" class="login">Log Out</a>
+            
+        </div>
+        
+        {% endif %}
         <div class="hamburger">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -76,7 +84,7 @@
             <div class="card-icon">
                 <i class="fa-solid fa-user-doctor"></i>
             </div>
-            <h2>{% length_doctors %}+</h2>
+            <h2>{{ length_doctors }}+</h2>
             <p>Experienced across specialties</p>
             <button class="card-button">Doctors</button>
         </div>
@@ -84,7 +92,7 @@
             <div class="card-icon">
                 <i class="fa-solid fa-bed"></i>
             </div>
-            <h2>{% length_patients %}+</h2>
+            <h2>{{ length_patients }}+</h2>
             <p>Serving a wide patient base</p>
             <button class="card-button">Patients</button>
         </div>
@@ -92,7 +100,7 @@
             <div class="card-icon">
                 <i class="fa-solid fa-stethoscope"></i>
             </div>
-            <h2>{% length_appointments %}+</h2>
+            <h2>{{ length_appointments }}+</h2>
             <p>High-quality consultations</p>
             <button class="card-button">Consultations</button>
         </div>
