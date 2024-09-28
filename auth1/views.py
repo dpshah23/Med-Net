@@ -6,8 +6,8 @@ from django.contrib import messages
 
 def login(request):
 
-    if 'email' not in request.session:
-        return redirect('/auth/login/')
+    if 'email'in request.session:
+        return redirect('/')
 
     if request.method=="POST":
         email=request.POST.get('email')
@@ -29,3 +29,5 @@ def login(request):
         
         except User.DoesNotExist:
             return render(request,"login.html",{"error":"User Does not Exist"})
+        
+    return render(request,'Login.html')
