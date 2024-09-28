@@ -25,10 +25,18 @@
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
+        {% if 'email' not in request.session %}
         <div class="nav-actions">
             <a href="#" class="login">Log in</a>
             <a href="#" class="btn-find-match">Sign Up</a>
         </div>
+        {% else %}
+        <div class="nav-actions">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="btn-find-match">Sign Up</a>
+        </div>
+        
+        {% endif %}
         <div class="hamburger">
             <i class="fa-solid fa-bars"></i>
         </div>
