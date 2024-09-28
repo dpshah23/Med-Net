@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'doctor',
+    'patient',
     'home',
     'channels',
     'jazzmin',

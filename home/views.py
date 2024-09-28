@@ -70,3 +70,4 @@ def api_response(request):
     else:
         print("Invalid method")
         return JsonResponse({'error':"Invalid method"})
+

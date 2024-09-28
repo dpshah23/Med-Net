@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/',include('auth1.urls')),
     path('videochat/',include('videochat.urls')),
-    path('',include("home.urls"))
+    path('',include("home.urls")),
+    path('doctor/',include("doctor.urls")),
+    path('patient/',include("patient.urls")),
 ]
