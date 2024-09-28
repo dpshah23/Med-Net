@@ -16,7 +16,9 @@ def home(request):
     length_patients=patient.objects.filter().count()
     length_appointments=appointments.objects.filter().count()
 
-    return render(request,"home.html",{ 'length_doctors':length_doctors,'length_patients':length_patients,'length_appointments':length_appointments})
+    print(length_doctors,length_patients,length_appointments)
+
+    return render(request,"home.html",{'length_doctors':length_doctors,'length_patients':length_patients,'length_appointments':length_appointments})
 
 def about(request):
     return render(request,"about.html")
