@@ -11,7 +11,7 @@ class User(models.Model):
     password=models.CharField(max_length=100)
     name=models.CharField(max_length=100)
     role=models.CharField(max_length=100)
-    fname = models.CharField(max_length=100)
+    # fname = models.CharField(max_length=100) # doubt ful
     dob = models.DateField()
     phone = models.CharField(max_length=15)
     state = models.CharField(max_length=50)

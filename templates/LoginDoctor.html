@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="final.css" />
+    <link rel="stylesheet" href="/static/css/loginDoctor.css" />
     <title>Login Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -22,7 +22,7 @@
     <h2 class="title">Log In</h2>
     <div class="input-field">
         <i class="fas fa-user"></i>
-        <input type="text" class="name" placeholder="Username" />
+        <input type="text" class="name" placeholder="Username" name="username"/>
     </div>
     <div class="input-field">
         <i class="fas fa-lock"></i>
@@ -44,36 +44,35 @@
                     </div>
                     <!-- login form -->
                     <div class="login-form-section">
-                        <form>
+                        <form action="/auth/signup/" method="POST">
                             <div class="login-signup-box" id="signup-form">
-                                <input type="text" class="name ele" id="full-name" placeholder="Full Name" required />
-                                <select id="gender" class="ele" required>
+                                <input type="text" class="name ele" id="full-name" placeholder="Full Name" required name="fname"/>
+                                <select id="gender" class="ele" name="gender" required>
                                     <option value="">Select Gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
                                 </select>
-                                <input type="text" class="ele" id="dob" placeholder="Date of Birth" required />
-                                <input type="tel" class="ele" id="phone" placeholder="Phone Number" required />
-                                <input type="email" class="ele" id="email" placeholder="youremail@email.com" required />
+                                <input type="text" class="ele" id="dob" placeholder="Date of Birth" required name="dob" />
+                                <input type="tel" class="ele" id="phone" placeholder="Phone Number" required name="phone" />
+                                <input type="email" class="ele" id="email" placeholder="youremail@email.com" required name="email"/>
                                
-                                <input type="text" class="ele" id="State" placeholder="State" required />
-                                <input type="text" class="ele" id="license-expiry" placeholder="License Expiry Date" required />
+                                <input type="text" class="ele" id="State" placeholder="State" required name="state" />
+                                <input type="text" class="ele" id="license-expiry" placeholder="License Expiry Date" required name="license_expiry" />
                                 <!-- <button class="submit"><a href="">Next</a></button> -->
                             </div>
-                        </form>
+                    
                       <!--signup form-->
               
-                      <form>
                         <div class="login-signup-box" id="doctor-signup-form">
-                            <input type="text" class="ele" id="specialization" placeholder="Specialization" required />
-                            <input type="text" class="ele" id="experience" placeholder="Start Date of medical practice" required />
-                            <input type="text" class="ele" id="highest-qualification" placeholder="Highest Qualification" required />
-                            <input type="text" class="ele" id="associated-hospital" placeholder="Associated Hospital" required />
-                            <input type="text" class="ele" id="medical-license-number" placeholder="Medical License Number" required />
+                            <input type="text" class="ele" id="specialization" placeholder="Specialization" required name="specialization" />
+                            <input type="text" class="ele" id="experience" placeholder="Start Date of medical practice" required name="startdate" />
+                            <input type="text" class="ele" id="highest-qualification" placeholder="Highest Qualification" required name="highestqual"/>
+                            <input type="text" class="ele" id="associated-hospital" placeholder="Associated Hospital" required name="hospital" />
+                            <input type="text" class="ele" id="medical-license-number" placeholder="Medical License Number" required name="licenseno" />
                             
                             <div class="password-container">
-                                <input type="password" class="ele" id="password" placeholder="Password" required />
+                                <input type="password" class="ele" id="password" placeholder="Password" required name="password" />
                                 <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
                             </div>
                             
@@ -127,7 +126,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="final.js"></script>
+    <script src="/static/js/loginDoctor.js"></script>
 </body>
 
 </html>
