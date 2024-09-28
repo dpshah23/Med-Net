@@ -7,13 +7,14 @@ import google.generativeai as genai
 import json
 import os
 from .models import *
+from auth1.models import *
 
 # Create your views here.
 def home(request):
 
     length_doctors=doctor.objects.filter().count()
     length_patients=patient.objects.filter().count()
-    length_appointments=appointment.objects.filter().count()
+    length_appointments=appointments.objects.filter().count()
 
     return render(request,"home.html",{ 'length_doctors':length_doctors,'length_patients':length_patients,'length_appointments':length_appointments})
 
