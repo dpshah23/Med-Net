@@ -1,17 +1,23 @@
 
 const APP_ID = process.env.APP_ID_AGORA
-const TOKEN = sessionStorage.getItem('token')
-const CHANNEL = sessionStorage.getItem('room')
+// const TOKEN = sessionStorage.getItem('token')
+// const CHANNEL = sessionStorage.getItem('room')
 
 
-let UID = sessionStorage.getItem('UID')
+// let UID = sessionStorage.getItem('UID')
 
-let NAME = sessionStorage.getItem('name')
+// let NAME = sessionStorage.getItem('name')
 
-const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
+// const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
 
-let localTracks = []
-let remoteUsers = {}
+// let localTracks = []
+// let remoteUsers = {}
+const urlParams = new URLSearchParams(window.location.search);
+const TOKEN = urlParams.get('token');  // Get token from the URL
+const CHANNEL = urlParams.get('room');  // Get room name from the URL
+let UID = urlParams.get('uid');  // Get UID from the URL
+let NAME = sessionStorage.getItem('name');
+
 
 let joinAndDisplayLocalStream = async () => {
     document.getElementById('room-name').innerText = CHANNEL

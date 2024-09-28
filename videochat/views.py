@@ -8,6 +8,8 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from dotenv import load_dotenv
 import os
+from django.urls import reverse
+from django.utils.http import urlencode
 
 
 # Create your views here.
@@ -31,8 +33,9 @@ def getToken(request):
     role = 1
 
     token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
+    join_url = f"http://yourdomain.com/room/?token={token}&room={channelName}&uid={uid}"
 
-    return JsonResponse({'token': token, 'uid': uid}, safe=False)
+    return JsonResponse({'join_url': join_url}, safe=False)
 
 
 @csrf_exempt
@@ -73,3 +76,4 @@ def deleteMember(request):
         return JsonResponse('Member deleted', safe=False)
     else:
         return JsonResponse({'error': 'Member does not exist'}, status=404, safe=False)
+
