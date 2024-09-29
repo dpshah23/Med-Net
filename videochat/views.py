@@ -33,7 +33,7 @@ def getToken(request):
     role = 1
 
     token = RtcTokenBuilder.buildTokenWithUid(appId, appCertificate, channelName, uid, role, privilegeExpiredTs)
-    join_url = f"http://yourdomain.com/room/?token={token}&room={channelName}&uid={uid}"
+    join_url = f"http://127.0.0.0:8000/room/?token={token}&room={channelName}&uid={uid}"
 
     return JsonResponse({'join_url': join_url}, safe=False)
 

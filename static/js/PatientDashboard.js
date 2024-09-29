@@ -15,63 +15,63 @@ const doctorsData = [
         qualification: 'MBBS',
         specialization: 'Cardiology',
         rating: 4.5,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'John Smith',
         qualification: 'MBBS',
         specialization: 'Cardiology',
         rating: 4.5,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'John Smith',
         qualification: 'MBBS',
         specialization: 'Cardiology',
         rating: 4.5,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Jane Doe',
         qualification: 'MD',
         specialization: 'Dermatology',
         rating: 4.8,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Jane Doe',
         qualification: 'MD',
         specialization: 'Dermatology',
         rating: 4.8,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Jane Doe',
         qualification: 'MD',
         specialization: 'Dermatology',
         rating: 4.8,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Emily Johnson',
         qualification: 'DNB',
         specialization: 'Pediatrics',
         rating: 4.7,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Ana Johnson',
         qualification: 'DNB',
         specialization: 'Pediatrics',
         rating: 4.7,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     },
     {
         name: 'Lily Johnson',
         qualification: 'DNB',
         specialization: 'Pediatrics',
         rating: 4.7,
-        image: 'https://via.placeholder.com/150'
+        image: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Jack'
     }
 ];
 
