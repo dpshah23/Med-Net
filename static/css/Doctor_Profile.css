@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 112vh;
+    padding-top: 80px;
+}
+
+::selection {
+    background-color: #04664f;
+    color: #ffffff;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #f5f5f7;
+    border-bottom: 1.6px solid #066450;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 175px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #05664f;
+    font-size: 2.8vh;
+    font-weight: 550;
+    transition: color 0.3s ease-in;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2.2px;
+    background-color: #05664f;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #098567;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.nav-actions .login {
+    margin-right: 20px;
+    color: #05664f;
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+.nav-actions .btn-find-match {
+    padding: 10px 20px;
+    background-color: #05664f;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-actions .btn-find-match:hover {
+    background-color: #098567;
+    transition: 0.3s ease-in;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #04664f;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    background-color: #f5f5f7;
+    text-align: center;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.mobile-menu.show {
+    top: 70px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu ul li a {
+    color: #266052;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu ul li a {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .mobile-menu ul li .btn-find-match {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: #04664f;
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+}
+
+/* Profile */
+
+.profile-card {
+    width: 65%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.litigation {
+    background-color: #05664f;
+    font-size: 15px;
+}
+
+.real-estate {
+    background-color: #4caf50;
+    font-size: 15px;
+}
+
+.business {
+    background-color: #098567;
+    font-size: 15px;
+}
+
+.date,
+.email,
+.license {
+    color: #757575;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.bio {
+    margin-top: 10px;
+    color: #424242;
+    font-size: 16px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-stats .stat {
+    width: 19%;
+}
+
+.profile-stats p {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.practice-areas {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.practice-areas h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.chart {
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(#f44336 0% 35%, #03a9f4 35% 70%, #4caf50 70%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.practice-list {
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.practice-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #05664f;
+    color: #fff;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #098567;
+    transition: 0.2s all ease-in;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+/* CSS for Chart.js Canvas (Optional) */
+canvas {
+    margin: 0 auto;
+    display: block;
+}

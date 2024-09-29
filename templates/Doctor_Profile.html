@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Profile | MedNet</title>
+    <link rel="stylesheet" href="/static/css/Doctor_Profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/static/Images/MedNet Favicon.png" />
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/Images/MedNet Logo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        {% if 'email' not in request.session %}
+        <div class="nav-actions">
+            <a href="/auth/login/" class="login">Log in</a>
+            <a href="/auth/signup/" class="btn-find-match">Sign Up</a>
+        </div>
+        {% else %}
+        <div class="nav-actions">
+            <a href="/auth/logout/" class="login">Log Out</a>
+        </div>
+
+        {% endif %}
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Doctor Profile -->
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="MedNet Favicon.png" alt="Amal Clooney" class="profile-img" />
+            <div class="profile-info">
+                <h2>Name of Doctor</h2>
+                <p>
+                    <span class="badge litigation">Experience</span>
+                    <span class="badge real-estate">Qualification</span>
+                    <span class="badge business">Details</span>
+                </p>
+                <p class="date">October 24, 2018</p>
+                <p class="email">johndoe@email.com</p>
+                <p class="license">Licensed for 10 years</p>
+                <p class="bio">
+                    Beloved attorney Maxim Lissak’s practice focuses on business, real
+                    estate, and tort litigation. Mr. Lissak has successfully represented
+                    clients in real estate, commercial and property disputes...
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat">
+                <p>100</p>
+                <p>Patient Consulted</p>
+            </div>
+            <div class="stat">
+                <p>100</p>
+                <p>Consultation Completed</p>
+            </div>
+            <div class="stat">
+                <p>100</p>
+                <p>Ratings</p>
+            </div>
+            <div class="stat">
+                <p>100+</p>
+                <p>Hours of Consultation</p>
+            </div>
+            <div class="stat">
+                <p>Specializes in</p>
+                <p>Heart</p>
+            </div>
+        </div>
+
+        <div class="practice-areas">
+            <h3>Graphs</h3>
+            <canvas id="practiceAreasChart" width="300" height="300"></canvas>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn about">Home</button>
+            <button class="btn contact">Dashboard</button>
+            <button class="btn review">Total No. Reviews</button>
+        </div>
+    </div>
+
+    <script src="/static/js/Doctor_Profile.js"></script>
+
+</body>
+
+</html>

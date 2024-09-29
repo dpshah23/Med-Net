@@ -39,7 +39,7 @@ def contact(request):
         message=request.POST.get('message')
         print(fname,lname,mobile,email,message)
 
-        contact=ContactUs(name=fname+" "+lname,email=email,mobile=mobile,message=message)
+        contact=ContactUs(name=fname+" "+lname,email=email,mobile=mobile,message=message,date=datetime.date.today())
         contact.save()
 
         return redirect('/contact-us/')

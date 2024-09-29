@@ -71,3 +71,27 @@ def pay (request , id):
     return render(request , "payment.html" , {'payment' : payment , 'key' : key})
     
     return redirect('bookappointment')
+
+def dashboard(request):
+     
+    cardiology=doctor.objects.filter(specialization="Cardiology")
+    dermatology=doctor.objects.filter(specialization="Dermatology")
+    pediatrics=doctor.objects.filter(specialization="Pediatrics")
+    neurology=doctor.objects.filter(specialization="Neurology")
+    orthopedics=doctor.objects.filter(specialization="Orthopedics")
+    oncology=doctor.objects.filter(specialization="Oncology")
+    psychiatry=doctor.objects.filter(specialization="Psychiatry")
+
+    data = [
+    {"name": "Cardiology", "doctors": cardiology.count() if cardiology.exists() else 0},
+    {"name": "Dermatology", "doctors": dermatology.count() if dermatology.exists() else 0},
+    {"name": "Pediatrics", "doctors": pediatrics.count() if pediatrics.exists() else 0},
+    {"name": "Neurology", "doctors": neurology.count() if neurology.exists() else 0},
+    {"name": "Orthopedics", "doctors": orthopedics.count() if orthopedics.exists() else 0},
+    {"name": "Oncology", "doctors": oncology.count() if oncology.exists() else 0},
+    {"name": "Psychiatry", "doctors": psychiatry.count() if psychiatry.exists() else 0}
+]
+
+
+    
+    return render(request,"patientdashboard.html",{"length_doctors":data})  

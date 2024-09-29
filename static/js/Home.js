@@ -10,21 +10,6 @@ function toggleChatbot() {
   chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
 }
 
-async function sendMessage() {
-  const input = document.getElementById('chatbotInput');
-  const message = input.value;
-  if (message.trim() === '') return;
-
-  displayMessage('You', message);
-  input.value = '';
-
-  try {
-    const response = await getChatbotResponse(message);
-    displayMessage('Bot', response.answer);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
 
 function displayMessage(sender, message) {
   const messagesContainer = document.getElementById('chatbotMessages');
@@ -56,27 +41,35 @@ document.getElementById('chatbotInput').addEventListener('keypress', function (e
   }
 });
 
-function sendMessage() {
-  const message = document.getElementById("chatbotInput").value;
-  if (message.trim() !== "") {
-    const userMessageElement = document.createElement("div");
-    userMessageElement.className = "message user-message";
-    userMessageElement.innerHTML = "<strong>You:</strong> " + message;
-    document.getElementById("chatbotMessages").appendChild(userMessageElement);
+async function sendMessage() {
+  const input = document.getElementById('chatbotInput');
+  const message = input.value;
+  if (message.trim() === '') return;
 
-    document.getElementById("chatbotInput").value = "";
+  // Display user message
+  const userMessageElement = document.createElement("div");
+  userMessageElement.className = "message user-message";
+  userMessageElement.innerHTML = "<strong>You:</strong> " + message;
+  document.getElementById("chatbotMessages").appendChild(userMessageElement);
 
-    setTimeout(() => {
-      const chatbotMessageElement = document.createElement("div");
-      chatbotMessageElement.className = "message chatbot-message";
-      chatbotMessageElement.innerHTML =
-        "<strong>Bot:</strong> " + "Hello! How can I help you?";
-      document
-        .getElementById("chatbotMessages")
-        .appendChild(chatbotMessageElement);
+  input.value = "";
 
-      document.getElementById("chatbotMessages").scrollTop =
-        document.getElementById("chatbotMessages").scrollHeight;
-    }, 1000);
+  // Send message to the API and display the bot response
+  try {
+    const response = await getChatbotResponse(message);
+    const chatbotMessageElement = document.createElement("div");
+    chatbotMessageElement.className = "message chatbot-message";
+    chatbotMessageElement.innerHTML = "<strong>Bot:</strong> " + response.answer;
+    document.getElementById("chatbotMessages").appendChild(chatbotMessageElement);
+  } catch (error) {
+    console.error('Error:', error);
+    const chatbotMessageElement = document.createElement("div");
+    chatbotMessageElement.className = "message chatbot-message";
+    chatbotMessageElement.innerHTML = "<strong>Bot:</strong> " + "Sorry, something went wrong.";
+    document.getElementById("chatbotMessages").appendChild(chatbotMessageElement);
   }
+
+  // Scroll to the latest message
+  document.getElementById("chatbotMessages").scrollTop =
+    document.getElementById("chatbotMessages").scrollHeight;
 }
