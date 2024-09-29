@@ -156,19 +156,19 @@ The system is designed to provide an intuitive telehealth experience:
 
 ## Photos
 
-- Home Page
+### Home Page
   ![WhatsApp Image 2024-09-29 at 15 34 39_78b9a3c7](https://github.com/user-attachments/assets/893b2166-3356-421e-b713-716eb252d591)
 
-- Chatbot
+### Chatbot
   ![WhatsApp Image 2024-09-29 at 15 35 41_f3fae656](https://github.com/user-attachments/assets/b1676d2e-bcc9-42d7-a73b-463261293e1b)
 
-- Patient Dashboard
+### Patient Dashboard
   ![WhatsApp Image 2024-09-29 at 15 40 48_d5b4ce48](https://github.com/user-attachments/assets/ef9e6cda-7acd-4e13-ad41-2b11ffaf63e9)
 
-- Video Call
+### Video Call
   ![WhatsApp Image 2024-09-29 at 15 45 09_8a6892bc](https://github.com/user-attachments/assets/77c0f367-0f9c-46e9-991d-963b46a309d1)
 
-- One-to-One Messaging
+### One-to-One Messaging
   ![Screenshot 2024-09-29 155654](https://github.com/user-attachments/assets/ff8f78f5-45cd-4e89-874c-e6e2d44ade87)
 
 
