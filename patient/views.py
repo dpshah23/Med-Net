@@ -1,3 +1,6 @@
+from django.shortcuts import render
+from auth1.models import *
+from home.models import appointments
 import os
 from pyexpat.errors import messages
 from django.http import HttpResponse
@@ -6,6 +9,8 @@ from dotenv import load_dotenv
 import razorpay
 from auth1.models import *
 from home.models import appointments
+
+# Create your views here.
 
 # Create your views here.
 def searchdoctor(request):
@@ -49,28 +54,6 @@ def bookappointment(request):
             return render(request,"patientappoinment.html")
     
         return render(request,"bookappointment.html")
-    
-def pay (request , id):
-    
-    ispaid = appointments.objects.get(id = id).paid_status
-    load_dotenv()
-    key = os.getenv('api_key_razorpay')
-    secret = os.getenv('api_secret_razorpay')
-    client = razorpay.Client(auth=(key, secret))
-    pay = appointments.objects.get(id =id).payment
-    
-    if ispaid:
-        return HttpResponse("Payment is already done")
-    
-    else:
-        try:
-            payment= client.order.create({"amount":pay , "currency": "INR", "payment_capture": '1'})
-        except Exception as e:
-            print("Error creating order: ", e)
-            
-    return render(request , "payment.html" , {'payment' : payment , 'key' : key})
-    
-    return redirect('bookappointment')
 
 def dashboard(request):
      
@@ -95,3 +78,27 @@ def dashboard(request):
 
     
     return render(request,"patientdashboard.html",{"length_doctors":data})  
+
+
+    
+def pay (request , id):
+    
+    ispaid = appointments.objects.get(id = id).paid_status
+    load_dotenv()
+    key = os.getenv('api_key_razorpay')
+    secret = os.getenv('api_secret_razorpay')
+    client = razorpay.Client(auth=(key, secret))
+    pay = appointments.objects.get(id =id).payment
+    
+    if ispaid:
+        return HttpResponse("Payment is already done")
+    
+    else:
+        try:
+            payment= client.order.create({"amount":pay , "currency": "INR", "payment_capture": '1'})
+        except Exception as e:
+            print("Error creating order: ", e)
+            
+    return render(request , "payment.html" , {'payment' : payment , 'key' : key})
+    
+    return redirect('bookappointment')
