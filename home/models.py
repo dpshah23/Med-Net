@@ -29,3 +29,10 @@ class appointments(models.Model):
     
     def not_expired(self):
         return self.date >= datetime.date.today()
+    
+class mails(models.Model):
+    email=models.EmailField(max_length=100)
+    datecreated=models.DateField()
+
+    def __str__(self):
+        return self.mail

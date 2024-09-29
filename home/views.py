@@ -21,7 +21,7 @@ def home(request):
     return render(request,"home.html",{'length_doctors':length_doctors,'length_patients':length_patients,'length_appointments':length_appointments})
 
 def about(request):
-    return render(request,"about.html")
+    return render(request,"About-Us.html")
 
 def dashboard(request):
     if 'role' and 'email' not in request.session:
@@ -40,9 +40,11 @@ def contact(request):
         print(fname,lname,mobile,email,message)
 
         contact=ContactUs(name=fname+" "+lname,email=email,mobile=mobile,message=message)
+        contact.save()
 
+        return redirect('/contact-us/')
         
-    return render(request,"contact.html")
+    return render(request,"Contact-Us.html")
 
 @csrf_exempt
 def api_response(request):
@@ -76,3 +78,13 @@ def termsandconditions(request):
 
 def privacy_policy(request):
     return render(request,"Privacy_Policy.html")
+
+def mailaddforemails(request):
+    if request.method=="POST":
+        email=request.POST.get('email')
+        print(email)
+        mail=mails(email=email,datecreated=datetime.date.today())
+        mail.save()
+
+        print("Mail added")
+    return redirect('/')

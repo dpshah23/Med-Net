@@ -21,14 +21,20 @@
             <img src="/static/Images/MedNet Logo.png" alt="Logo" />
         </div>
         <ul class="nav-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/about-us/">About Us</a></li>
+            {% if request.session.role == "patient" %}
+            <li><a href="/patient/">Dashboard</a></li>
+            {% elif request.session.role == "doctor" %} 
+            <li><a href="/doctor/">Dashboard</a></li>
+            {% else %}  
+            <li><a href="/auth/login">Dashboard</a></li>
+            {% endif %}
+            <li><a href="/contact-us/">Contact Us</a></li>
         </ul>
         {% if 'email' not in request.session %}
         <div class="nav-actions">
             <a href="/auth/login/" class="login">Log in</a>
-            <a href="/auth/signup/" class="btn-find-match">Sign Up</a>
+            <a href="/auth/login/" class="btn-find-match">Sign Up</a>
         </div>
         {% else %}
         <div class="nav-actions">
@@ -58,8 +64,8 @@
                 <span class="para">anytime, anywhere.</span>
             </p>
             <div class="hero-buttons">
-                <a href="#" class="btn-primary">Get Started Now<i class="fa-solid fa-angle-right"></i></a>
-                <a href="#" class="btn-secondary">Learn More</a>
+                <a href="/auth/login/" class="btn-primary">Get Started Now<i class="fa-solid fa-angle-right"></i></a>
+                <a href="/about-us/" class="btn-secondary">Learn More</a>
             </div>
         </div>
         <div class="hero-image">
@@ -164,7 +170,7 @@
             <div class="footer-section programs">
                 <h3>Company Information</h3>
                 <ul>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="/about-us/">About Us</a></li>
                     <li><a href="">Our Team</a></li>
                     <li><a href="">Careers</a></li>
                 </ul>
@@ -182,7 +188,7 @@
             <div class="footer-section contact">
                 <h3>Resources</h3>
                 <ul>
-                    <li><a href="">Help Center</a></li>
+                    <li><a href="/contact-us/">Help Center</a></li>
                     <li><a href="/privacy-policy/">Privacy Policy</a></li>
                     <li><a href="/terms-and-conditions/">Terms of Services</a></li>
                 </ul>
@@ -190,8 +196,9 @@
 
             <div class="footer-section newsletter">
                 <h3>Newsletter</h3>
-                <form>
-                    <input type="email" placeholder="Email Address" required>
+                <form action="/mailadd/" method="POST">
+                    {% csrf_token %}
+                    <input type="email" placeholder="Email Address" name="email" required>
                     <button type="submit">Subscribe</button>
                 </form>
                 <div class="contact-info">
