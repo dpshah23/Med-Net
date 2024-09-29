@@ -65,29 +65,29 @@
                 </ul>
 
             </div>
-
+        <form action="/contact-us/" method="POST">
             <div class="contactForm">
                 <h2>Send a Message</h2>
                 <div class="formBox">
 
                     <div class="inputBox w50">
-                        <input type="text" required>
+                        <input type="text" required name="name">
                         <span>First Name</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required>
+                        <input type="text" required name="lname">
                         <span>Last Name</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="email" required>
+                        <input type="email" required name="email">
                         <span>Email Address</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required>
+                        <input type="text" required name="mobile">
                         <span>Mobile Number</span>
                     </div>
                     <div class="inputBox w100">
-                        <textarea required></textarea>
+                        <textarea required name="message"></textarea>
                         <span>Write your message here...</span>
                     </div>
                     <div class="inputBox w100">
@@ -98,6 +98,7 @@
             </div>
 
         </div>
+    </div>
     </section>
 
 </body>

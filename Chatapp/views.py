@@ -11,7 +11,7 @@ def CreateRoom(request):
         email = request.SESSION.get('email')
         username = User.objects.get(email=email).name
         room = ''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase+string.digits) for _ in range(8))
-
+        role = request.SESSION.get('role')
         try:
             get_room = Room.objects.get(room_name=room)
             return redirect('room', room_name=room, username=username)
@@ -19,6 +19,12 @@ def CreateRoom(request):
         except Room.DoesNotExist:
             new_room = Room(room_name = room)
             new_room.save()
+            if (role == doctor):
+                new = joined(new_room = room , username = doctor)
+                new.save()
+            else :
+                new = joined(new_room = room , username = patient)
+                new.save()
             return redirect('room', room_name=room, username=username)
 
     return render(request, 'list.html')

@@ -29,4 +29,4 @@ class joined(models.Model):
     room = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.room
+        return  self.patient + " " + self.doctor 
