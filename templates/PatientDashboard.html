@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+                   initial-scale=1.0"
+    />
+    <title>Patient | Dashboard </title>
+    <link rel="stylesheet" href="/static/css/PatientDashboard.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/36d72e7e2f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- for header part -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/static/Images/MedNet Logo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="dropdown">
+          <div class="dp" onclick="toggleDropdown()">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+              class="dpicn"
+              alt="dp"
+            />
+          </div>
+          <div class="dropdown-content" id="myDropdown">
+            <div class="nav-option option5">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                class="nav-img"
+                alt="blog"
+              />
+              <h3>Profile</h3>
+            </div>
+
+            <div class="nav-option option6">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                class="nav-img"
+                alt="settings"
+              />
+              <h3>Settings</h3>
+            </div>
+
+            <div class="nav-option logout">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                class="nav-img"
+                alt="logout"
+              />
+              <h3>Logout</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <div class="nav-option option1">
+              <i class="fa-solid fa-calendar-check icon"></i>
+              <h3 class=".menuText">Dashboard</h3>
+            </div>
+
+            <div class="option2 nav-option">
+              <i class="fa-solid fa-calendar-check icon"></i>
+
+              <h3 class=".menuText">Apointments</h3>
+            </div>
+
+            <div class="nav-option option3">
+              <i class="fa-solid fa-calendar-check icon"></i>
+              <h3 class=".menuText">Messages</h3>
+            </div>
+
+            <div class="nav-option option4">
+              <i class="fa-solid fa-calendar-check icon"></i>
+              <h3 class=".menuText">Feedback</h3>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+        
+        <!-- Search -->
+        <!-- <div class="container"> -->
+          <!-- <h1 class="title">Doctor Search</h1> -->
+          <!-- <div class="search-container"> -->
+              <!-- <input type="text" id="searchInput" class="input" placeholder="Search for a specialization..." oninput="filterSpecializations()" /> -->
+              <!-- <div class="searchDropdown" id="specializations"> -->
+                  <!-- Specializations will be populated here -->
+              <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="results" id="results"> -->
+
+              <!-- <div class="card1">
+                <div class="cardIcon">
+                  <img src="" alt="John Smith">
+                </div>
+                <div class="card-title">
+                  <h3>John Smith</h3>
+                </div>
+                <div class="cardQualification">
+                  <p><span>Qulification: </span>MBBs</p>
+                </div>
+                <div class="cardSpecalization">
+                  <p><span>Specalization: </span></p>
+                </div>
+                <div class="cardRating">
+                  <p><span>Rating: </span>4.5</p>
+                </div>
+                <button class="cardBook">Book Now</button>
+              </div> -->
+
+              <!-- <div class="card-container"> -->
+                <!-- Doctor cards will be populated here -->
+            <!-- </div> -->
+            <!-- <p class="default-message">No results found. Please search for a specialization.</p> -->
+          <!-- </div> -->
+      <!-- </div> -->
+      <div class="container">
+        <h1 class="title">Doctor Search</h1>
+        <div class="search-container">
+            <div class="searchDropdown" id="specializations">
+                <!-- Specialization buttons will be populated here -->
+            </div>
+        </div>
+        <div class="results" id="results">
+            <div class="card-container">
+                <!-- Doctor cards will be populated here -->
+            </div>
+            <p class="default-message">No results found. Please select a specialization.</p>
+        </div>
+    </div>
+
+      </div>
+    </div>
+
+    <script src="/static/js/PatientDashboard.js"></script>
+  </body>
+</html>
