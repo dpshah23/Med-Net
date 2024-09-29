@@ -14,6 +14,7 @@ class ContactUs(models.Model):
         return self.name
     
 class appointments(models.Model):
+    id = models.CharField(max_length=100 , primary_key = True)
     doc_email = models.CharField(max_length=200)
     p_email = models.CharField(max_length=200 , default=None)
     date = models.DateField()
@@ -22,6 +23,8 @@ class appointments(models.Model):
     payment = models.CharField(max_length=10)
     vc_link = models.TextField(default=None)
     completed = models.BooleanField(default=False)
+    paid_status = models.BooleanField(default=False)
+    description = models.CharField(max_length=400 , default=True)
     doc_paid = models.BooleanField(default=False)
     
     def __str__(self):

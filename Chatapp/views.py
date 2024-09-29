@@ -62,8 +62,4 @@ def list_of_rooms(request):
     elif (role == patient):
         rooms = joined.objects.filter(username = patient)
         return redirect()
-    
-    else :
-        pass 
-    
-    
+  
