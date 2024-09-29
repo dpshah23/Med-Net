@@ -78,7 +78,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'MedNet.wsgi.application'
+ASGI_APPLICATION = 'your_project_name.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],  # Assuming Redis is running locally
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

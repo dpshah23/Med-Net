@@ -48,9 +48,10 @@
 </body>
 <script>
     function scrollToBottom() {
-        const container = document.getElementById('chat_container');
+        const container = document.getElementById('chatContainer');
         container.scrollTop = container.scrollHeight;  // Scroll to the bottom of the container
     }
+    
 
     const websocketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
     const wsEndpoint = `${websocketProtocol}://${window.location.host}/ws/notification/{{room_name}}/`;
@@ -121,6 +122,11 @@
     socket.onclose = (event) => {
         console.log("WebSocket connection closed!");
     };
+
+    socket.onerror = (event) => {
+        console.error("WebSocket error: ", event);
+    };
+
 
 </script>
 <style>
