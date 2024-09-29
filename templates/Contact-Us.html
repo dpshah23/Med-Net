@@ -66,6 +66,7 @@
 
             </div>
         <form action="/contact-us/" method="POST">
+            {% csrf_token %}
             <div class="contactForm">
                 <h2>Send a Message</h2>
                 <div class="formBox">
