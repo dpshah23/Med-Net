@@ -44,7 +44,7 @@ We aim to create a telehealth platform that bridges the gap between patients and
    - Notifications sent via email for upcoming appointments.
 3. *Health Record Management*: Patients can upload and share medical records securely with doctors. Doctors can update health records after each consultation.
 4. *Real-Time Communication*: Integrated video conferencing for consultations. Secure messaging for post-consultation queries and updates.
-5. *Feedback and Rating System*: Patients can provide feedback after consultations.
+5. *Feedback and Rating System*: Patients can provide feedback after consultations
 
 ---
 
