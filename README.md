@@ -8,10 +8,9 @@
 4. [Tech Stack](#tech-stack)
 5. [Installation](#installation)
 6. [Usage](#usage)
-7. [Main Functions](#main-functions)
-8. [Templates](#templates)
-9. [Flow of the System](#flow-of-the-system)
-10. [Contributors](#contributors)
+7. [Templates](#templates)
+8. [Flow of the System](#flow-of-the-system)
+9. [Contributors](#contributors)
 
 ---
 
@@ -53,13 +52,12 @@ We aim to create a telehealth platform that bridges the gap between patients and
 
 - *Backend*: 
   - Django: Web framework for backend development.
-  - MySQL: Relational database for data storage.
+  - PostgreSQL : Relational database for data storage.
   - WebRTC: For video conferencing.
   - Gemenai API: For intelligent Q&A support (if applicable).
 
 - *Frontend*: 
   - HTML5, CSS3, JavaScript: Frontend technologies for UI/UX.
-  - Bootstrap: For responsive design.
 
 - *Deployment*:
   - Docker: Containerization for easy deployment.
@@ -76,13 +74,13 @@ To get a local copy of Med-Net-Main up and running, follow these steps:
 
 ### Prerequisites
 - Python 3.8+: Ensure Python is installed.
-- MySQL: Make sure MySQL is installed and running.
+- PostgreSQL: Make sure PostgreSQL is installed and running.
 
 ### Installation Steps
 1. Clone the repository:
 
     bash
-    git clone https://github.com/your-username/Med-Net-Main.git
+    git clone[ https://github.com/your-username/Med-Net-Main.git](https://github.com/dpshah23/Med-Net.git)
     cd Med-Net-Main
     
 
@@ -114,25 +112,6 @@ Once the server is running, you can:
 - *Upload Health Records*: Patients can upload medical records for doctor review.
 - *Video Consultations*: Doctors and patients can conduct video calls for consultations.
 - *Post-Consultation Feedback*: Patients can leave feedback after a consultation.
-
----
-
-## Main Functions
-
-- *User Authentication*:
-  - signup(request): Handles registration for both doctors and patients.
-  - login(request): Authenticates users and manages sessions.
-  - logout(request): Logs users out and clears sessions.
-
-- *Appointment Management*:
-  - schedule_appointment(request): Allows patients to book consultations.
-  - view_appointments(request): Shows upcoming appointments for doctors and patients.
-
-- *Video Conferencing*:
-  - start_call(request): Initiates a video call between the doctor and patient.
-
-- *Messaging System*:
-  - send_message(request): Enables secure messaging between doctors and patients.
 
 ---
 
@@ -169,5 +148,5 @@ The system is designed to provide an intuitive telehealth experience:
   Vedant Tuvar.
   Paripurna Tiwari.
 - Backend Worked:--
-  Depp Shah.
+  Deep Shah.
   Nakshi Shah.
