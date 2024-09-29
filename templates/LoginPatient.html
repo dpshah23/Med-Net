@@ -18,29 +18,29 @@
             <div class="signin-signup">
                 <!-- Sign-In Form (No Changes) -->
                 <!-- Sign-In Form (No Changes) -->
-<form action="#" class="sign-in-form active" id="login">
-    <h2 class="title">Log In</h2>
-    <div class="input-field">
-        <i class="fas fa-user"></i>
-        <input type="text" class="name" placeholder="Username" />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="login-password" class="ele" placeholder="Password" required />
-        <i class="fas fa-eye-slash toggleIcon" id="toggle-login-password"></i>
-    </div>
-    <input type="submit" value="Login" class="loginBtn solid" />
-</form>
+                <form action="#" class="sign-in-form active" id="login">
+                    <h2 class="title">Log In</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="name" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" class="ele" placeholder="Password" required />
+                        <i class="fas fa-eye-slash toggleIcon" id="toggle-login-password"></i>
+                    </div>
+                    <input type="submit" value="Login" class="loginBtn solid" />
+                </form>
 
 
                 <!-- Updated Sign-Up Form -->
-                 
+
                 <div class="login-container" id="non">
-                   
+
                     <div class="login-slider"></div>
                     <div class="login-btn">
-                      <button class="login-login">Personal</button>
-                      <button class="login-signup">Professional</button>
+                        <button class="login-login">Personal</button>
+                        <button class="login-signup">Professional</button>
                     </div>
                     <!-- login form -->
                     <div class="login-form-section">
@@ -56,44 +56,51 @@
                                 <input type="text" class="ele" id="dob" placeholder="Date of Birth" required />
                                 <input type="tel" class="ele" id="phone" placeholder="Phone Number" required />
                                 <input type="email" class="ele" id="email" placeholder="youremail@email.com" required />
-                                
-                                <input type="text" class="ele" id="emergency-contact-name" placeholder="Emergency Contact Name" required />
-                                <input type="tel" class="ele" id="emergency-contact-phone" placeholder="Emergency Contact Phone" required />
+
+                                <input type="text" class="ele" id="emergency-contact-name"
+                                    placeholder="Emergency Contact Name" required />
+                                <input type="tel" class="ele" id="emergency-contact-phone"
+                                    placeholder="Emergency Contact Phone" required />
                                 <!-- <button class="submit"><a href="">Next</a></button> -->
                             </div>
                         </form>
-                        
-                      <!--signup form-->
-              
-                     <form>
-    <div class="login-signup-box" id="patient-signup-form">
-        <input type="text" class="ele" id="blood-group" placeholder="Blood Group" required />
-        <!-- <input type="text" class="ele" id="medical-history" placeholder="Medical History" required /> -->
-        <input type="text" class="ele" id="allergies" placeholder="Allergies" required />
-        <input type="text" class="ele" id="current-medication" placeholder="Current Medication" required />
-        <input type="text" class="ele" id="habits" placeholder="Habits (Smoking, Alcohol)" required />
-        <input type="text" class="ele" id="occupation" placeholder="Occupation" required />
-        
-        <div class="password-container">
-            <input type="password" class="ele" id="password" placeholder="Password" required />
-            <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
-        </div>
-        
-        <div class="confirm-password-container">
-            <input type="password" class="ele" id="confirm-password" placeholder="Confirm Password" required />
-            <span class="eye-icon" onclick="togglePasswordVisibility('confirm-password')">👁️</span>
-        </div>
-        
-        <span id="password-error" style="color: red; display: none;">Password doesn't match</span>
-        
-        <button type="button" class="submit" onclick="checkPasswords()">Submit</button>
-    </div>
-</form>
 
-                    
+                        <!--signup form-->
+
+                        <form>
+                            <div class="login-signup-box" id="patient-signup-form">
+                                <input type="text" class="ele" id="blood-group" placeholder="Blood Group" required />
+                                <!-- <input type="text" class="ele" id="medical-history" placeholder="Medical History" required /> -->
+                                <input type="text" class="ele" id="allergies" placeholder="Allergies" required />
+                                <input type="text" class="ele" id="current-medication" placeholder="Current Medication"
+                                    required />
+                                <input type="text" class="ele" id="habits" placeholder="Habits (Smoking, Alcohol)"
+                                    required />
+                                <input type="text" class="ele" id="occupation" placeholder="Occupation" required />
+
+                                <div class="password-container">
+                                    <input type="password" class="ele" id="password" placeholder="Password" required />
+                                    <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
+                                </div>
+
+                                <div class="confirm-password-container">
+                                    <input type="password" class="ele" id="confirm-password"
+                                        placeholder="Confirm Password" required />
+                                    <span class="eye-icon"
+                                        onclick="togglePasswordVisibility('confirm-password')">👁️</span>
+                                </div>
+
+                                <span id="password-error" style="color: red; display: none;">Password doesn't
+                                    match</span>
+
+                                <button type="button" class="submit" onclick="checkPasswords()">Submit</button>
+                            </div>
+                        </form>
+
+
                     </div>
-              
-                  </div>
+
+                </div>
             </div>
         </div>
 
@@ -130,7 +137,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="Patient.js"></script>
+    <script src="/static/js/Patient.js"></script>
 </body>
 
 </html>
