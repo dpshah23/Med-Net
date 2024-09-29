@@ -16,14 +16,14 @@
 ---
 
 ## Introduction
-Med-Net-Main is a comprehensive telehealth platform designed to facilitate virtual healthcare services. It supports video conferencing, appointment scheduling, health record integration, and secure messaging between doctors and patients. Med-Net-Main aims to make healthcare more accessible and efficient, providing both patients and doctors with tools for seamless communication, consultations, and follow-ups.
+MedNet is a comprehensive telehealth platform designed to facilitate virtual healthcare services. It supports video conferencing, appointment scheduling, health record integration, and secure messaging between doctors and patients. MedNet aims to make healthcare more accessible and efficient, providing both patients and doctors with tools for seamless communication, consultations, and follow-ups.
 
 ---
 
 ## Problem Statement
 *Problem Statement for Hackathon*
 
-We aim to create a telehealth platform that bridges the gap between patients and doctors by enabling remote consultations and medical services. Med-Net-Main will support essential features such as video conferencing, appointment scheduling, health record integration, and a messaging system for secure doctor-patient communication.
+We aim to create a telehealth platform that bridges the gap between patients and doctors by enabling remote consultations and medical services. MedNet will support essential features such as video conferencing, appointment scheduling, health record integration, and a messaging system for secure doctor-patient communication.
 
 ### Requirements
 - *User Roles*:
@@ -43,7 +43,7 @@ We aim to create a telehealth platform that bridges the gap between patients and
 1. *Doctor and Patient Sign-Up*: Different forms for doctors and patients, gathering relevant personal and professional information.
 2. *Appointment Management*: Doctors can set available slots, and patients can book appointments accordingly.
    - Notifications sent via email for upcoming appointments.
-3. *Health Record Management*: Patients can upload and share medical records securely with doctors. Doctors can update health records after each consultation.
+3. *Health Record Management*: Patients can share medical records securely with doctors. Doctors can update health records after each consultation.
 4. *Real-Time Communication*: Integrated video conferencing for consultations. Secure messaging for post-consultation queries and updates.
 5. *Feedback and Rating System*: Patients can provide feedback after consultations
 
@@ -55,12 +55,12 @@ We aim to create a telehealth platform that bridges the gap between patients and
   - Django: Web framework for backend development.
   - PostgreSQL : Relational database for data storage.
   - WebRTC: For video conferencing.
-  - Gemenai API: For intelligent Q&A support (if applicable).
+  - Gemini API: For intelligent Q&A support (if applicable).
 
 - *Frontend*: 
   - HTML5, CSS3, JavaScript: Frontend technologies for UI/UX.
 
-- *Deployment*:
+- *Deployment Plans*:
   - Docker: Containerization for easy deployment.
   - Akash Network: For hosting and scalability.
 
@@ -81,7 +81,7 @@ To get a local copy of Med-Net-Main up and running, follow these steps:
 1. Clone the repository:
 
     bash
-    git clone[ https://github.com/your-username/Med-Net-Main.git](https://github.com/dpshah23/Med-Net.git)
+    git clone https://github.com/dpshah23/Med-Net
     cd Med-Net-Main
     
 
