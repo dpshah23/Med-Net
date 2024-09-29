@@ -26,3 +26,6 @@ class appointments(models.Model):
     
     def __str__(self):
         return "{doc_email} and {p_email}"
+    
+    def not_expired(self):
+        return self.date >= datetime.date.today()

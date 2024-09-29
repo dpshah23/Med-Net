@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'doctor',
     'patient',
     'home',
+    'Chatapp',
     'channels',
     'jazzmin',
     'auth1',
