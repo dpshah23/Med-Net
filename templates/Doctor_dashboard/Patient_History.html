@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | MedNet</title>
+    <link rel="stylesheet" href="/static/css/Doctor_Dashboard/Patient_History.css" />
+    <script defer src="/static/js/Doctor_Dashboard/Patient_History.js"></script>
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/static/Images/MedNet Favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/Images/MedNet Logo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="profile-dropdown">
+                <img id="profile-icon" src="/static/Images/image.png" alt="Profile" class="profile-icon" />
+                <div id="dropdown" class="dropdown-content">
+                    <a href="#"><i class="fa-solid fa-user"></i>Profile</a>
+                    <a href="#"><i class="fa-solid fa-cog"></i>Settings</a>
+                    <a href="#"><i class="fa-solid fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li onclick="showSection('dashboard')">Dashboard</li>
+                <li onclick="showSection('appointments')">Appointments</li>
+                <li onclick="showSection('messages')">Messages</li>
+                <li onclick="showSection('patienthistory')">Patient History</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- New Section for User Cards -->
+            <section class="user-card-section">
+                <h2>Connections</h2>
+                <div class="user-list">
+                    <div class="user-item">
+                        <img src="image.png" alt="User 1" class="user-avatar">
+                        <div class="user-info">
+                            <h3>Steven G. Copeland</h3>
+                            <p>Philadelphia, PA</p>
+                        </div>
+                        <button class="follow-btn">Chat</button>
+                    </div>
+
+                    <div class="user-item">
+                        <img src="image.png" alt="User 2" class="user-avatar">
+                        <div class="user-info">
+                            <h3>Gaylord Linck</h3>
+                            <p>Weybridge, VT</p>
+                        </div>
+                        <button class="follow-btn followed">Chat</button>
+                    </div>
+
+                    <div class="user-item">
+                        <img src="image.png" alt="User 3" class="user-avatar">
+                        <div class="user-info">
+                            <h3>Lois D. Hill</h3>
+                            <p>Green Bay, IL</p>
+                        </div>
+                        <button class="follow-btn">Chat</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

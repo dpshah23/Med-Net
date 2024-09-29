@@ -1,0 +1,184 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+::selection {
+    background-color: #04664f;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #f5f5f7;
+    border-bottom: 1.6px solid #066450;
+}
+
+.logo img {
+    max-width: 175px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #05664f;
+    font-size: 2.8vh;
+    font-weight: 550;
+    transition: color 0.3s ease-in;
+}
+
+.nav-links a:hover {
+    color: #098567;
+}
+
+/* Dropdown and Profile */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-icon {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sidebar */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    width: 200px;
+    padding: 20px;
+    height: 135vh;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sidebar ul li:hover {
+    background-color: #ddd;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* User Card Section */
+.user-card-section {
+    padding: 20px;
+    background-color: #f8f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25rem;
+}
+
+.user-card-section h2 {
+    margin: 10px;
+}
+
+.user-list {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #066450;
+}
+
+.user-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.follow-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #05664f;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #098567;
+}
+
+.followed {
+    background-color: #05664f;
+    color: #ffffff;
+    cursor: default;
+}
