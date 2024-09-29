@@ -81,7 +81,7 @@ To get a local copy of Med-Net-Main up and running, follow these steps:
 1. Clone the repository:
 
     bash
-    git clone https://github.com/dpshah23/Med-Net
+    git clone [https://github.com/dpshah23/Med-Net](https://github.com/dpshah23/Med-Net)
     cd Med-Net-Main
     
 
