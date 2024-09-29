@@ -24,4 +24,5 @@ urlpatterns = [
     path('',include("home.urls")),
     path('doctor/',include("doctor.urls")),
     path('patient/',include("patient.urls")),
+    path('chat/',include("Chatapp.urls")),
 ]
