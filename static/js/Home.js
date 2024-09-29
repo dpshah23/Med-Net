@@ -20,10 +20,9 @@ async function sendMessage() {
 
   try {
       const response = await getChatbotResponse(message);
-      displayMessage('Bot', response.answer); // Assuming response is structured as {'answer': ...}
+      displayMessage('Bot', response.answer);
   } catch (error) {
       console.error('Error:', error);
-      // Handle error display or logging as needed
   }
 }
 

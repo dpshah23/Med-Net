@@ -354,7 +354,6 @@ body {
     background-color: #098567;
 }
 
-/* Responsive Cards */
 @media (max-width: 768px) {
     .cards-section {
         flex-direction: column;
@@ -429,7 +428,6 @@ body {
     margin-top: 10px;
 }
 
-/* Responsive Cards */
 @media (max-width: 768px) {
     .cards-section {
         flex-direction: column;
@@ -563,7 +561,6 @@ footer {
     font-size: 22px;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .footer-section {
         width: 48%;
@@ -604,9 +601,7 @@ footer {
     }
 }
 
-/*--------------------------------------------*/
-/*---------------Chatbot----------------------*/
-/*--------------------------------------------*/
+/* Chatbot */
 
 .chatbot-icon {
     position: fixed;
@@ -623,7 +618,6 @@ footer {
     font-size: 30px;
     cursor: pointer;
     z-index: 1000;
-    /* display: none; */
 }
 
 .chatbot-container {
@@ -655,7 +649,6 @@ footer {
     background-color: #f9f9f9;
     color: black;
     max-height: 300px;
-    /* Adjust as needed */
     overflow-y: auto;
     height: 66vh;
 }
