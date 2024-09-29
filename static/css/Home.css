@@ -497,6 +497,15 @@ footer {
     font-size: 20px;
 }
 
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-section ul li a:hover {
+    color: #05664f;
+}
+
 .footer-section form {
     display: flex;
 }
@@ -616,6 +625,7 @@ footer {
     z-index: 1000;
     /* display: none; */
 }
+
 .chatbot-container {
     display: none;
     position: fixed;
@@ -630,28 +640,33 @@ footer {
     z-index: 1000;
     flex-direction: column;
 }
+
 .chatbot-header {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+
 .chatbot-messages {
     flex: 1;
     padding: 0px;
-   
+
     background-color: #f9f9f9;
     color: black;
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px;
+    /* Adjust as needed */
     overflow-y: auto;
     height: 66vh;
 }
+
 .chatbot-input-container {
     display: flex;
     padding: 10px;
     background-color: #f1f1f1;
     color: black;
 }
+
 .chatbot-input {
     flex: 1;
     padding: 10px;
@@ -659,6 +674,7 @@ footer {
     border-radius: 5px;
     margin-right: 10px;
 }
+
 .send-button {
     padding: 10px;
     background-color: #333;
@@ -667,4 +683,3 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
-  
