@@ -71,3 +71,8 @@ def api_response(request):
         print("Invalid method")
         return JsonResponse({'error':"Invalid method"})
 
+def termsandconditions(request):
+    return render(request,"Terms & Conditions.html")
+
+def privacy_policy(request):
+    return render(request,"Privacy_Policy.html")
